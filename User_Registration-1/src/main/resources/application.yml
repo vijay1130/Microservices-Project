@@ -1,0 +1,17 @@
+server:
+  port: 9292
+  
+spring:
+  datasource:
+      url: jdbc:h2:mem:testdb
+      driverClassName: org.h2.Driver
+      username: sa
+      password: password
+
+  jpa:
+      database-platform: org.hibernate.dialect.H2Dialect
+      show-sql: true
+  hibernate:      ddl-auto: update  application:    name: User_Registration
+      
+eureka:  client:    service-url:      defaultZone: ${DISCOVERY_URL:http://localhost:9761}/eureka/
+      

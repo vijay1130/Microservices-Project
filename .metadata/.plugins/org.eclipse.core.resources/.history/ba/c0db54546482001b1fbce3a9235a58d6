@@ -1,0 +1,26 @@
+server:
+  port: 4444
+
+spring:  application:    name: GetWay-API
+
+eureka:
+  client:
+    service-url:
+      defaultZone: ${DISCOVERY_URL:http://localhost:9761}/eureka/
+
+
+
+zuul:
+  prefix: /api
+  routes:
+    
+    hi:
+      path: /hi/**
+      url: http://localhost:1111/hi/hi/vijay
+    hello:
+      path: /hello/**
+      url:  http://localhost:2222/hello/hello/vijay
+
+
+     
+      

@@ -1,0 +1,9 @@
+server:
+  port: 5656
+  
+spring:  jpa:    hibernate:      ddl-auto: update
+      show_sql: true
+      formate_sql: true
+        application:    name: Student_Registration
+   
+eureka:  client:    service-url:      defaultZone: ${DISCOVERY_URL:http://localhost:9761}/eureka/

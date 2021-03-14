@@ -1,0 +1,8 @@
+server:
+  port: 5656
+  
+spring:  jpa:    hibernate:      ddl-auto: update
+      show_sql: true
+      formate_sql: true
+      
+    
